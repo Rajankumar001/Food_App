@@ -1,0 +1,15 @@
+.CartScreen{
+    background-color: #FFC72C;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 25px;
+    margin-top: 10px;
+}
+.Id_text{
+    color: white;
+    font-weight: 500;
+}
+.Food_Item_name{
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}

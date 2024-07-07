@@ -1,0 +1,11 @@
+.text-color{
+    color: rgb(211, 207, 207);
+    font-size: 20px;
+}
+.icon-color{
+    color: yellow;
+}
+.topbar{
+    padding-bottom: 0px;
+    margin-bottom: 0px; 
+}
