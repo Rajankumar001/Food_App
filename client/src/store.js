@@ -12,9 +12,13 @@ import { LoginReducer } from './reducers/RegisterReducer';
     RegisterReducer:RegisterReducer
  })
  const Food=localStorage.getItem('Food')? JSON.parse(localStorage.getItem('Food')):[]
+ const currentUser=localStorage.getItem('currentUser')? JSON.parse(localStorage.getItem('currentUser')):null;
  const initialstate={
    CartReducer:{
-   Food:Food
+   Food:Food,
+   },
+   LoginReducer:{
+      currentUser:currentUser
    }
  }
  const Middleware=[thunk];

@@ -21,6 +21,29 @@ routes.post('/Register',async(req,res)=>{
     console.log('error caught....',err)
   }
 })
+routes.post('/Login',async(req,res)=>{
+  try{
+        const {email,password}=req.body;
+        const user=await RegisterModel.find({email,password})
+        if(user.length>0){
+        const  currentUser={
+            name:user[0].name,
+            email:user[0].email,
+            address:user[0].address,
+          }
+          res.status(200).send({
+            success:true,
+            message:"login successfully",
+            currentUser,
+          })
+        }
+       
+         
+  }
+  catch(err){
+    console.log('error caught....',err)
+  }
+})
 
 
 module.exports=routes;

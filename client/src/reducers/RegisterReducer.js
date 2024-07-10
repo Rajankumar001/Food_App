@@ -1,3 +1,4 @@
+
 export const RegisterReducer=(state={},action)=>{
     switch(action.type){
         case 'REGISTER_REQUEST':
@@ -31,6 +32,7 @@ export const LoginReducer=(state={},action)=>{
                 return{
                     loading:false,
                     success:true,
+                    currentUser:action.payload,
                 }
                 case 'LOGIN_ERROR':
                     return{
@@ -38,9 +40,8 @@ export const LoginReducer=(state={},action)=>{
                         err:action.payload
                         
                     }
-                    default :return {
-                        state
-                    }
+                    default :return state
+                    
     }
 
 }
