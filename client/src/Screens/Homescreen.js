@@ -3,6 +3,7 @@ import {useDispatch,useSelector} from 'react-redux';
 import {Container,Row,Col} from 'react-bootstrap';
 import Home from '../components/Home/Home.js'
 import {getAllFood} from '../Action/Action.js';
+import Loader from '../components/Loader.js';
 const Homescreen = () => {
   const dispatch=useDispatch();
   const foodstate=useSelector((state)=>state.getFoodReducers);
@@ -16,7 +17,7 @@ const Homescreen = () => {
     <Container>
       {
         loading?(
-          <h1>loading.....</h1>
+        <Loader/>
         ):
         err ?(
           <h1>error is fetching...</h1>

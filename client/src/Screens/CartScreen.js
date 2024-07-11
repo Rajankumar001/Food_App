@@ -6,6 +6,7 @@ import { CiCircleMinus } from "react-icons/ci";
 import { CiCirclePlus } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
 import {deleteFromCart} from '../Action/AddtoCart'
+import Checkout from '../components/Checkout';
 const CartScreen = () => {
 const dispatch=useDispatch()
 const Cart=useSelector((state)=>state.CartReducer);
@@ -71,7 +72,7 @@ return (
             <h2>Payment Info</h2>
             <h3>SubTotal</h3>
               <h4>Rs{subTotal}/-</h4>
-              <Button>Checkout</Button>
+             <Checkout subTotal={subTotal}/>
             </Col>
         </Row>
       </Container>
