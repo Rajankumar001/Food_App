@@ -5,9 +5,11 @@ import {getFoodReducers} from './reducers/FoodReducers';
 import { CartReducer } from './reducers/CartReducers';
 import { RegisterReducer } from './reducers/RegisterReducer';
 import { LoginReducer } from './reducers/RegisterReducer';
+import { OrderReducer } from './reducers/OrederReducer';
  const rootReducer=combineReducers({
     getFoodReducers:getFoodReducers,
     CartReducer:CartReducer,
+    OrderReducer:OrderReducer,
     LoginReducer:LoginReducer,
     RegisterReducer:RegisterReducer
  })
