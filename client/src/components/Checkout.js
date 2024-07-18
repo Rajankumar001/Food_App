@@ -1,8 +1,12 @@
 import React from 'react'
 import StripeCheckout from 'react-stripe-checkout';
-import { useDispatch} from 'react-redux';
+import { useDispatch,useSelector} from 'react-redux';
 import {OrderAction} from '../Action/OrderAction'
+
 const Checkout = ({subTotal}) => {
+  const placingorderState=useSelector(state=>state.AllOrderReducer)
+  const {loading,success,error}=placingorderState;
+  
   const dispatch=useDispatch()
  const tokenHandler=(token)=>{
   console.log('Checkout - Token:', token," is not fetching");

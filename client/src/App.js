@@ -10,16 +10,16 @@ import Homescreen from './Screens/Homescreen';
 import CartScreen from './Screens/CartScreen';
 import UserRegister from './components/Register/UserRegister';
 import Login from './components/Login/Login';
-
+import AllorderScreen from './Screens/AllorderScreen';
 function App() {
   return (
-    
     <BrowserRouter>
     <Topbar/>
     <Logo/>
     <Routes>
     <Route  path='/register' Component={UserRegister} exact/>
     <Route  path='/login' Component={Login} exact/>
+    <Route  path='/order' Component={AllorderScreen} exact/>
     <Route  path='/cart' Component={CartScreen} exact/>
       <Route  path='/about' Component={About} exact/>
       <Route  path='/contact' Component={Contact} exact/>

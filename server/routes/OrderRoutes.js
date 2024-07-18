@@ -58,5 +58,21 @@ const customer=await stripe.customers.create({
         console.log("error caught",err)
     }
     })
+    router.post('/getUserorder',async(req,res)=>{
+      const {userid}=req.body;
+      console.log(userid);
+      console.log(req.body);
+      try{
+         const orders=await Order.find({userid})
+         res.status(200).send(orders);
+      }
+      catch(err){
+         res.status(500).send({
+            success:false,
+            message:"Internal server error",
+            err:err.stack
+         })
+      }
+    })
 
 module.exports=router;

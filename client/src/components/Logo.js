@@ -27,7 +27,9 @@ const Logo = () => {
               id="nav-dropdown-dark-example"
               title={currentUser.currentUser.name}
               menuVariant="dark"
-            ><NavDropdown.Item href="#action/3.1">Order</NavDropdown.Item>
+            ><LinkContainer to='/order'>
+            <Nav.Link className='order_color'>Order</Nav.Link>
+            </LinkContainer>
               <NavDropdown.Item href="#action/3.3" onClick={()=>{dispatch(logoutUser())}} >Logout</NavDropdown.Item>
             </NavDropdown>
             </LinkContainer></>):(<>

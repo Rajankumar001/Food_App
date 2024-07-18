@@ -19,3 +19,15 @@ dispatch({type:'ORDER_FAIL'})
 console.log(err)
 }
 }
+export const Allorder=()=>async(dispatch,getState)=>{
+    const currentUser=getState().LoginReducer.currentUser;
+    dispatch({type:'ALL_ORDER_REQUEST'})
+    try{
+     const response=await axios.post('/api/placingorder/getUserorder',{userid:currentUser.currentUser._id})   
+     console.log("response",response);
+     dispatch({type:"ALL_ORDER_SUCCESS",payload:response.data})
+    }catch(error){
+        dispatch({type:'ALL_ORDER_FAIL',payload:error})
+        console.log("error caught...",error)
+    }
+}
