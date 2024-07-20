@@ -63,7 +63,7 @@ const customer=await stripe.customers.create({
       console.log(userid);
       console.log(req.body);
       try{
-         const orders=await Order.find({userid})
+         const orders=await Order.find({userid}).sort({_id:"-1"})
          res.status(200).send(orders);
       }
       catch(err){
