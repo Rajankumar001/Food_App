@@ -29,6 +29,7 @@ routes.post('/Login',async(req,res)=>{
         const  currentUser={
             name:user[0].name,
             email:user[0].email,
+            isAdmin:user[0].isAdmin,
             _id:user[0]._id,
             address:user[0].address,
           }

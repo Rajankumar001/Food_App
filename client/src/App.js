@@ -11,12 +11,14 @@ import CartScreen from './Screens/CartScreen';
 import UserRegister from './components/Register/UserRegister';
 import Login from './components/Login/Login';
 import AllorderScreen from './Screens/AllorderScreen';
+import AdminScreen from './Screens/AdminScreen';
 function App() {
   return (
     <BrowserRouter>
     <Topbar/>
     <Logo/>
     <Routes>
+    <Route  path='/Admin/*' Component={AdminScreen} />
     <Route  path='/register' Component={UserRegister} exact/>
     <Route  path='/login' Component={Login} exact/>
     <Route  path='/order' Component={AllorderScreen} exact/>
