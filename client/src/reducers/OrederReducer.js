@@ -43,3 +43,27 @@ export const AllOrderReducer=(state={orders:[]},action)=>{
             return state;
     }
 }
+export const AlluserorderReducer=(state={orders:[]},action)=>{
+    switch(action.type){
+        case 'ALL_USERORDER_REQUEST':
+            return{
+                loading:true,
+                ...state,
+                
+            }
+            case 'ALL_USERORDER_SUCCESS':
+            return{
+                loading:false,
+                success:true,
+                orders:Array.isArray(action.payload) ? action.payload : [],
+                
+            }
+            case 'ALL_USERORDER_FAIL':
+            return{
+                loading :false,
+                error:action.payload
+        }
+        default:
+            return state;
+    }
+}

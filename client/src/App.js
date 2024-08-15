@@ -12,6 +12,7 @@ import UserRegister from './components/Register/UserRegister';
 import Login from './components/Login/Login';
 import AllorderScreen from './Screens/AllorderScreen';
 import AdminScreen from './Screens/AdminScreen';
+import EditItem from './components/Admin/EditItem';
 function App() {
   return (
     <BrowserRouter>
@@ -23,6 +24,7 @@ function App() {
     <Route  path='/login' Component={Login} exact/>
     <Route  path='/order' Component={AllorderScreen} exact/>
     <Route  path='/cart' Component={CartScreen} exact/>
+    <Route path="/admin/editItem/:id" Component={EditItem} exact />
       <Route  path='/about' Component={About} exact/>
       <Route  path='/contact' Component={Contact} exact/>
       <Route  path='/policy' Component={Policy} exact/>

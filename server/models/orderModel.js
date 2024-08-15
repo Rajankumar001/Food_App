@@ -21,6 +21,7 @@ const orderSchema=mongoose.Schema({
     },
     isDelivered:{
    type:String,
+   default:false,
     }
 });
 module.exports=mongoose.model('order',orderSchema);

@@ -58,21 +58,46 @@ const customer=await stripe.customers.create({
         console.log("error caught",err)
     }
     })
-    router.post('/getUserorder',async(req,res)=>{
-      const {userid}=req.body;
-      console.log(userid);
-      console.log(req.body);
-      try{
-         const orders=await Order.find({userid}).sort({_id:"-1"})
-         res.status(200).send(orders);
+    router.post('/getUserorder', async (req, res) => {
+      const { userid } = req.body;
+    
+      console.log("Received userid:", userid); // Debugging: Check if userid is received
+      console.log("Request body:", req.body); // Debugging: Check the full request body
+    
+      try {
+        if (!userid) {
+          return res.status(400).send({
+            success: false,
+            message: "User ID is missing in the request body",
+          });
+        }
+    
+        const orders = await Order.find({ userid }).sort({ _id: -1 });
+    
+        if (orders.length === 0) {
+          return res.status(404).send({
+            success: false,
+            message: "No orders found for this user",
+          });
+        }
+    
+        res.status(200).send(orders);
+      } catch (err) {
+        console.error("Error fetching orders:", err); // Logging the error for debugging
+        res.status(500).send({
+          success: false,
+          message: "Internal server error",
+          error: err.message, // Send the error message in the response
+        });
       }
-      catch(err){
-         res.status(500).send({
-            success:false,
-            message:"Internal server error",
-            err:err.stack
-         })
-      }
-    })
+    });
+    router.get('/alluserorder',async(req,res)=>{
+      try{ const allorders=await Order.find({})
+      res.send(allorders)
+    }
+    catch(err){
+      console.log("err caught....",err);
+    }
+    });
 
 module.exports=router;

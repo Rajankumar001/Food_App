@@ -31,3 +31,15 @@ export const Allorder=()=>async(dispatch,getState)=>{
         console.log("error caught...",error)
     }
 }
+export const Alluserorder=()=>async(dispatch)=>{
+    // const currentUser=getState().LoginReducer.currentUser;
+    dispatch({type:'ALL_USERORDER_REQUEST'})
+    try{
+     const response=await axios.get('/api/placingorder/alluserorder')   
+     console.log("response",response);
+     dispatch({type:"ALL_USERORDER_SUCCESS",payload:response.data})
+    }catch(error){
+        dispatch({type:'ALL_USERORDER_FAIL',payload:error})
+        console.log("error caught...",error)
+    }
+}
