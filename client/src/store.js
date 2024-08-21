@@ -1,5 +1,5 @@
 import {legacy_createStore,combineReducers,applyMiddleware} from 'redux'
-import {thunk} from 'redux-thunk';
+import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {getFoodReducers,addFoodReducers,editFoodReducers,} from './reducers/FoodReducers';
 import { CartReducer } from './reducers/CartReducers';
