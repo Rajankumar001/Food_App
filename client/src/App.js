@@ -3,7 +3,8 @@ import './App.css';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Topbar from './components/Topbar';
 import About from './components/About/About';
-import Contact from './components/Contact/Contact'
+// import Contact from './components/Contact/Contact'
+// import 
 import Policy from './components/Terms&Policy/Policy';
 import Logo from './components/Logo';
 import Homescreen from './Screens/Homescreen';
@@ -26,7 +27,7 @@ function App() {
     <Route  path='/cart' Component={CartScreen} exact/>
     <Route path="/admin/editItem/:id" Component={EditItem} exact />
       <Route  path='/about' Component={About} exact/>
-      <Route  path='/contact' Component={Contact} exact/>
+      {/* <Route  path='/contact' Component={Contact} exact/> */}
       <Route  path='/policy' Component={Policy} exact/>
       <Route  path='/' Component={Homescreen} exact/>
       </Routes>
