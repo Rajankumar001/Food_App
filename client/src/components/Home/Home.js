@@ -54,8 +54,8 @@ dispatch(AddtoCart(sweets,variants,quantity))
   <Row>
     <Col md={6}>
     prices:{
-      sweets.prices[0][variants]*quantity
-    }
+    sweets.prices && sweets.prices[0] && sweets.prices[0][variants]*quantity
+}
     </Col>
     <Col md={6}>
     <Button className='bg-warning text-white'
