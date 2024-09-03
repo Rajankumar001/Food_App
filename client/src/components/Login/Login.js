@@ -5,6 +5,7 @@ import {useDispatch} from 'react-redux';
 import './Login.css';
 import { Container } from 'react-bootstrap';
 import { LoginAction } from '../../Action/RegisterAction';
+import Footerpage from '../Footer/Footerpage';
 const Login = () => {
     const dispatch=useDispatch();
   const [email, setEmail]=useState("");
@@ -43,6 +44,7 @@ const LoginHandler=()=>{
       </Button>
     </Form>  
     </Container>
+    <Footerpage/>
     </>
   )
 }

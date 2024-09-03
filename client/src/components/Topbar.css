@@ -3,9 +3,37 @@
     font-size: 20px;
 }
 .icon-color{
-    color: yellow;
+    color: #F4CE14;
+}
+.text-color{
+    font-size: 1.2rem;
+    color:#379777;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 .topbar{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
     padding-bottom: 0px;
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
+    background-color: #F4CE14; 
 }
+.nav-container{
+    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    padding: 0;
+}
+ @media (max-width:600px) {
+    .text-color{
+        display: none;
+    }
+    
+    
+ }

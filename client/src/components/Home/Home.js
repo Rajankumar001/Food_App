@@ -13,18 +13,19 @@ dispatch(AddtoCart(sweets,variants,quantity))
   return (
 <>
 {sweets && (
- <Card style={{ width: '30rem',marginBottom:'20px' }}>
+  <>
+ <Card className='food-card'>
  <Card.Img variant="top" src={sweets.image} style={{height:'198.15px',cursor:"pointer"}} />
- <Card.Body>
-   <Card.Title>{sweets.name}</Card.Title>
+ <Card.Body className='card-body'>
+   <Card.Title className='card-title'>{sweets.name}</Card.Title>
    <hr/>
-   <Card.Text>
-    <Row>
-    <Col md={6}>
+   <Card.Text className='card-text'>
+    <Row className='card-row'>
+    <Col md={6} className='quantity-item'>
     <h5>
       Varient
     </h5>
-    <select value={variants} onChange={e=>setvariant(e.target.value)}>
+    <select value={variants} onChange={e=>setvariant(e.target.value)} className='select-item'>
       {
         sweets.variants.map(varient=>(
           <option >
@@ -34,11 +35,11 @@ dispatch(AddtoCart(sweets,variants,quantity))
       }
     </select>
     </Col>
-    <Col md={6}>
+    <Col md={6} className='quantity-item'>
     <h5>
       quantity
     </h5>
-    <select  value={quantity} onChange={e=>setquantity(e.target.value)}>
+    <select  value={quantity} onChange={e=>setquantity(e.target.value)} className='select-item'>
       {
         [...Array(6).keys()].map((v,i)=>(
           <option value={i+1}>
@@ -49,24 +50,27 @@ dispatch(AddtoCart(sweets,variants,quantity))
     </select>
     </Col>
     
-      </Row>
+      </Row >
    </Card.Text>
-  <Row>
-    <Col md={6}>
+  <Row className='card-row'>
+    <Col md={6} className='quantity-item price-title'>
     prices:{
     sweets.prices && sweets.prices[0] && sweets.prices[0][variants]*quantity
 }
     </Col>
-    <Col md={6}>
-    <Button className='bg-warning text-white'
-
+    <Col md={6} className='quantity-item button'>
+    <Button className='addtocart-button'
     onClick={addTocartHandler}
     > Add to cart</Button>
     </Col>
   </Row>
  </Card.Body>
 </Card>
+</>
+
       )}
+      
+
 </>
   )
 }

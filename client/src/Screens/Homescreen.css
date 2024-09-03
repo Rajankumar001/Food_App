@@ -1,0 +1,18 @@
+.main-home-page{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.banner-home-page {
+     height: 30%;
+     width:100%;
+}
+.banner-home-page img{
+   height: 90%;
+   width: 100%;;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.displaying-item{
+    
+}

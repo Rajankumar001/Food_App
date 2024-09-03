@@ -2,3 +2,36 @@
     color: white;
     margin-left: 10px;
 }
+.logo-img img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.logo-title{
+    font-size: 1.2rem;
+    color:#379777;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.Navigation{
+    font-size: 1rem;
+    color:#379777;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+@media (max-width:600px) {
+    .logo-title{
+        display: none;
+    }
+    .nav-bar-logo{
+        width: auto;
+        display: flex;
+        padding: 0 20px 0 20px;
+        align-items: center;
+        gap: 350px;
+    }
+}

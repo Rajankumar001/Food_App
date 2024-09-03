@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Button,Container,Form } from 'react-bootstrap';
 import {useDispatch} from 'react-redux';
 import { RegisterAction } from '../../Action/RegisterAction';
+import Footerpage from '../Footer/Footerpage';
 const UserRegister = () => {
   const dispatch=useDispatch();
 const [name,setName]=useState("");
@@ -51,6 +52,7 @@ const [address,setAddress]=useState("");
       </Button>
     </Form>
 </Container>
+<Footerpage/>
     </>
   )
 }

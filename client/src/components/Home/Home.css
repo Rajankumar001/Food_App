@@ -1,3 +1,145 @@
-.fonts{
-color: red;
+.food-card{
+    margin: auto;
+    margin-top: 40px;
+    box-shadow:-2px 2px 4px rgb(203, 201, 201);
+    height: 400px;
+    width: 320px;
+    border: none;
+}
+.food-card:focus{
+    width: 370px;
+    height: 430px;
+    transition: 0.5s ease-in;
+}
+.quantity-item{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    font-size: 0.9rem;
+    color:#379777;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.quantity-item h5{
+    color:#379777;
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; 
+}
+.select-item{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    color: orange;
+}
+.card-title{
+    margin: 0;
+    width: 280px;
+    padding: 0;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #F4CE14;
+    color:#e9ecf2;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: 300; */
+    font-style: normal; 
+    text-align: center;
+    padding-top: 10px;
+}
+.addtocart-button{
+    width: 120px;
+    height: 40px;
+    font-size: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal; 
+    text-align: center;
+    border-radius: 5px;
+    background-color: #379777;
+    color: #f6f8fb;
+}
+
+.addtocart-button:hover{
+    cursor: pointer;
+    border: 2px solid #F4CE14;
+    color: #379777;
+    
+}
+@media (max-width:600px) {
+    .food-card{
+        margin: auto;
+        margin-top: 40px;
+        box-shadow:-1px 1px 2px #F4CE14 ;
+        height: 400px;
+        width: 320px;
+        border: none;
+    }
+    .quantity-item{
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        align-items: center;
+        font-size: 0.9rem;
+        color:#379777;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .quantity-item h5{
+        color:#379777;
+        font-size: 0.9rem;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal; 
+    }
+    .select-item{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        color: #F4CE14;
+    }
+    .card-body{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-row{
+        display: flex;
+        width: 300px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .quantity-item{
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        align-items: center;
+        font-size: 0.9rem;
+        color:#379777;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .price-title{
+        margin-left: 10px;
+    }
+  .button{
+        width: 170px;
+    }
+    
 }
