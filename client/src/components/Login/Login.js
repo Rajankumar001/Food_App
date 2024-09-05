@@ -25,26 +25,30 @@ const LoginHandler=()=>{
 }
   return (
     <>
-    <Container>
+    <div className='login-main-container'> 
+    <div className='Login_container'>
      <Form>
+      <h2>Login</h2>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email"  value={email} onChange={e=>setEmail(e.target.value)}/>
+        <Form.Label className='title'>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email"  value={email} onChange={e=>setEmail(e.target.value)} className='form_input'/>
         <Form.Text className="text-muted">
           We'll never share your email with anyone else.
         </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password"value={password} onChange={e=>setPassword(e.target.value)} />
+        <Form.Label className='title'>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password"value={password} onChange={e=>setPassword(e.target.value)} className='form_input'/>
       </Form.Group>
-      <Button variant="primary" onClick={LoginHandler}>
+      <Button variant="primary" onClick={LoginHandler} className='login-button'>
         login
       </Button>
+      <span><h4>Don't have an account yet?Sign Up</h4><a href='/register'>sign up</a></span>
     </Form>  
-    </Container>
+    </div>
     <Footerpage/>
+    </div>
     </>
   )
 }
