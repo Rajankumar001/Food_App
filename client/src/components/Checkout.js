@@ -1,8 +1,8 @@
 import React from 'react'
 import StripeCheckout from 'react-stripe-checkout';
 import { useDispatch,useSelector} from 'react-redux';
-import {OrderAction} from '../Action/OrderAction'
-
+import {OrderAction} from '../Action/OrderAction';
+import Footerpage from '../components/Footer/Footerpage';
 const Checkout = ({subTotal}) => {
   const placingorderState=useSelector(state=>state.AllOrderReducer)
   const {loading,success,error}=placingorderState;
@@ -15,6 +15,7 @@ const Checkout = ({subTotal}) => {
     }
   return (
     <>
+   
     <StripeCheckout
     amount={subTotal*100} // cents
     shippingAddress
@@ -26,6 +27,7 @@ const Checkout = ({subTotal}) => {
     pay now
   </button>
 </StripeCheckout>
+
     </>
   )
 }
