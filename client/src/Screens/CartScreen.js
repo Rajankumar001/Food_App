@@ -4,7 +4,7 @@ import React from 'react'
 import './CartScreen.css';
 import { CiCircleMinus } from "react-icons/ci";
 import { CiCirclePlus } from "react-icons/ci";
-import { MdDelete } from "react-icons/md";
+import { ImCross } from "react-icons/im";
 import {deleteFromCart} from '../Action/AddtoCart'
 import Checkout from '../components/Checkout';
 const CartScreen = () => {
@@ -14,16 +14,14 @@ const Cart=useSelector((state)=>state.CartReducer);
  const subTotal=Food.reduce((x,Item)=>x+Item.price,0)
 return (
     <>
-      <Container>
-        <Row>
-            <Col md={7}>
-           <Row>
-            <h2>My Cart</h2>
-            <Col md={7}>
+      
+        <div className='cart-container'>
+            <div>
+           <div className='cart-reciept'>
+            <div  className='cart-left-reciept' >
              {
           
                Food.map((Item)=>(
-                <div>
                 <div className='CartScreen'>
                 <h3 className='Id_text'>
                     {Item._id}
@@ -45,38 +43,38 @@ return (
                 </h5>
            
                 </div>
-                </div>
+                
                 
                ))
              }
 
-            </Col>
-            <Col md={5}>
+            </div>
+            <div md={6} className='cart-right-reciept'>
             {
              Food.map((Item)=>(
                     <div>
-     <img src={Item.image} alt={Item.name} style={{width:"150px",height:"155px",marginTop:"10px",paddingBottom:"5px"}}>
+     <img src={Item.image} alt={Item.name} >
     </img>
-    <MdDelete style={{cursor:"pointer",fontSize:"25px",color:"red",marginLeft:"20px"}} onClick={()=>{
+    <ImCross  onClick={()=>{
       dispatch(deleteFromCart(Item))
-    }}/>
+    }} className='cancel-button'/>
                     </div>
     
                 ))
             }
              
-            </Col>
-           </Row>
-            </Col >
-            <Col md={5} className='payment-box'>
+            </div>
+           </div>
+            </div >
+            <div  className='payment-box'>
             <h2 className='payment-title'> Payment Info</h2>
             <br></br>
             <h3>SubTotal</h3>
               <h4>Rs{subTotal}/-</h4>
              <Checkout subTotal={subTotal}/>
-            </Col>
-        </Row>
-      </Container>
+            </div>
+        </div>
+    
     </>
   )
 }
