@@ -69,9 +69,9 @@ return (
             <div  className='payment-box'>
             <h2 className='payment-title'> Payment Info</h2>
             <br></br>
-            <h3>SubTotal</h3>
-              <h4>Rs{subTotal}/-</h4>
-             <Checkout subTotal={subTotal}/>
+            <h3 className='sub-total'>SubTotal</h3>
+              <h4 className='pay-button'>Rs{subTotal}/-</h4>
+             <Checkout subTotal={subTotal} />
             </div>
         </div>
     
