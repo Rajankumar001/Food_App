@@ -70,6 +70,8 @@
 .addtocart-button:hover{
     cursor: pointer;
     border: 2px solid #F4CE14;
+    background-color: #fff;
+    transition: 1s ease-out ;
     color: #379777;
     
 }

@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { Button,Container,Form } from 'react-bootstrap';
+import { Button,Form } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {useDispatch} from 'react-redux';
 import { RegisterAction } from '../../Action/RegisterAction';
 import '../Login/Login.css';
@@ -14,6 +16,7 @@ const [address,setAddress]=useState("");
  const Registerhandle=()=>{
   const user={name,email,password,address};
   dispatch(RegisterAction(user))
+  toast("user registered successfully !");
   console.log(user);
   setName(" ");
   setEmail(" ");
@@ -27,6 +30,7 @@ const [address,setAddress]=useState("");
 <div className='signup_container'>
     <Form>
       <h2>Sign Up</h2>
+      <ToastContainer/>
     <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label className='title'>Name</Form.Label>
         <Form.Control type="text"  value={name} placeholder="Name" onChange={e=>setName(e.target.value)}  className='form_input'/>

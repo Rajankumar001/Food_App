@@ -14,6 +14,11 @@ const Checkout = ({subTotal}) => {
       dispatch(OrderAction(token,subTotal));
        console.log(token)
     }
+    const payNowhandler=()=>{
+      if(!localStorage.getItem('currentUser')){
+        window.location.href='/login'
+      }
+    }
   return (
     <>
    
@@ -24,7 +29,7 @@ const Checkout = ({subTotal}) => {
     token={tokenHandler}
     stripeKey="pk_test_51Pawu4RtvSyFI9hfUMSPLtMU7LOzHVNVAzP5NsnEvscfkU9EnWJ6z5oLfCgXjfEjup8n660QNI1G772N0VQ9JD6m00Z5CSTffw"
     >
-<button className="checkout">
+<button className="checkout" onClick={payNowhandler}>
     pay now
   </button>
 </StripeCheckout>

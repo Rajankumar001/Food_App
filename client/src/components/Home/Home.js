@@ -8,7 +8,7 @@ const dispatch=useDispatch()
 const [variants,setvariant]=useState("0.5kg")
 const [quantity,setquantity]=useState(1);
 const addTocartHandler=()=>{
-dispatch(AddtoCart(sweets,variants,quantity))  
+dispatch(AddtoCart(sweets,variants,quantity))
 }
   return (
 <>

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import {useDispatch} from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import './Login.css';
 import { Container } from 'react-bootstrap';
 import { LoginAction } from '../../Action/RegisterAction';
+
 import Footerpage from '../Footer/Footerpage';
 const Login = () => {
     const dispatch=useDispatch();
@@ -15,6 +16,8 @@ const Login = () => {
  if(localStorage.getItem('currentUser')){
     window.location.href='/'
  }
+
+
 },[])
 const LoginHandler=()=>{
     const user ={email,password}
