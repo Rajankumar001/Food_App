@@ -5,7 +5,7 @@ import {useDispatch} from 'react-redux';
 import {AddtoCart}  from "../../Action/AddtoCart";
 const Home = ({sweets}) => {
 const dispatch=useDispatch()
-const [variants,setvariant]=useState("0.5kg")
+const [variants,setvariant]=useState(sweets.variants[0])
 const [quantity,setquantity]=useState(1);
 const addTocartHandler=()=>{
 dispatch(AddtoCart(sweets,variants,quantity))
@@ -54,9 +54,9 @@ dispatch(AddtoCart(sweets,variants,quantity))
    </Card.Text>
   <Row className='card-row'>
     <Col md={6} className='quantity-item price-title'>
-    prices:{
-    sweets.prices && sweets.prices[0] && sweets.prices[0][variants]*quantity
-}
+    prices:{sweets.prices[0] && sweets.prices[0][variants] 
+    ? sweets.prices[0][variants] * quantity 
+    : 'Price not available'}
     </Col>
     <Col md={6} className='quantity-item button'>
     <Button className='addtocart-button'
