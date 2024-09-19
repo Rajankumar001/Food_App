@@ -16,7 +16,7 @@
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
-    box-shadow: -4px 5px 4px rgb(208, 206, 206);
+    box-shadow: -4px 4px 4px rgb(208, 206, 206);
     width: 450px;
     height: 500px;
     display: flex;
@@ -32,10 +32,16 @@
     height: 100px;
 
 }
+.text-muted p{
+    color: #379777;
+    font-size: 0.8rem;
+}
 .form_input{
+    font-size: 0.85rem;
+    width: 400px;
     border: none;
-    border-bottom: 2px solid grey;
-    color: lightslategray
+    box-shadow: 2px 2px 2px grey;
+    color: rgb(239, 230, 230)
 } form h2{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -51,13 +57,11 @@
     background-color: #F4CE14;
     color: #fff;
 }
-.login-button::after{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    text-align: center;
-    background-color: #379777;
+.login-button:hover{
+transition: 1s ease-out;
+    background-color: #fff;
+    color: #379777;
+    border: 2px solid #F4CE14;
 }
 span h4{
     margin-right: 30px;
@@ -76,7 +80,7 @@ span a{
 }
 .title{
     font-size: 1rem;
-    color: grey;
+    color: #379777;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
 }
@@ -118,7 +122,7 @@ span a{
     }
     .form_input{
         border: none;
-        border-bottom: 2px solid grey;
+        box-shadow: 2px 2px 2px grey;
         color: lightslategray
     }
     .login-button{
@@ -126,6 +130,11 @@ span a{
         height: 50px;
         background-color: #F4CE14;
         color: #fff;
+    }
+    .login-button:hover{
+        background-color: #fff;
+        color: #379777;
+        border: 2px solid #F4CE14;
     }
     .signup_container{
         margin: 20px 0px;

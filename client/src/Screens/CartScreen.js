@@ -52,7 +52,7 @@ return (
             <div md={6} className='cart-right-reciept'>
             {
              Food.map((Item)=>(
-                    <div>
+                    <div style={{display:'flex'}}>
      <img src={Item.image} alt={Item.name} >
     </img>
     <ImCross  onClick={()=>{

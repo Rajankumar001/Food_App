@@ -6,6 +6,7 @@ import About from './components/About/About';
 // import Contact from './components/Contact/Contact'
 // import 
 import Policy from './components/Terms&Policy/Policy';
+import Contact from './components/Contact/Contact.js';
 import Logo from './components/Logo';
 import Homescreen from './Screens/Homescreen';
 import CartScreen from './Screens/CartScreen';
@@ -13,6 +14,7 @@ import UserRegister from './components/Register/UserRegister';
 import Login from './components/Login/Login';
 import AllorderScreen from './Screens/AllorderScreen';
 import AdminScreen from './Screens/AdminScreen';
+
 import EditItem from './components/Admin/EditItem';
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
       <Route  path='/about' Component={About} exact/>
       {/* <Route  path='/contact' Component={Contact} exact/> */}
       <Route  path='/policy' Component={Policy} exact/>
+      <Route  path='/contact' Component={Contact} exact/>
       <Route  path='/' Component={Homescreen} exact/>
       </Routes>
     </BrowserRouter>

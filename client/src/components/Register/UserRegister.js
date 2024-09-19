@@ -39,7 +39,7 @@ const [address,setAddress]=useState("");
         <Form.Label className='title'>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email"value={email} onChange={e=>setEmail(e.target.value)} className='form_input'/>
         <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
+         <p> We'll never share your email with anyone else.</p>
         </Form.Text>
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
