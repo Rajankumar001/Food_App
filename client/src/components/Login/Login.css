@@ -96,12 +96,7 @@ span a{
     align-items: center;  
 }
 @media (max-width:600px) {
-    .form_input {
-        border: none;
-        box-shadow: 2px 2px 2px grey;
-        color: #789;
-        width: 350px;
-    }
+   
     .Login_container{
         margin: 20px 0px;
         font-family: "Montserrat", sans-serif;
@@ -150,4 +145,12 @@ span a{
         align-items: center;
     }
     
+}
+@media (max-width:375px) {
+    .form_input {
+        border: none;
+        box-shadow: 2px 2px 2px grey;
+        color: #789;
+        width: 350px;
+    }
 }
