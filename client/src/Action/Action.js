@@ -61,4 +61,24 @@ const baseUrl = "https://hungryfoodapp-api-1.onrender.com/";
        console.log(err);
     }
   };
+  export const FilterSearch=(searchkey,category)=>async(dispatch)=>{
+    let filterfood;
+         dispatch({type:'GET_FOOD_REQUEST'})
+    try{
+        const res=await axios.get(`${baseUrl}api/food/getAllFood`);
+        filterfood=res.data.result.filter((Food)=>
+          Food.name.toLowerCase().includes(searchkey)
+        )
+        if(category !=="all"){
+          filterfood=res.data.result.filter((Food)=>
+            Food.category.toLowerCase()===category
+          )
+        }
+        console.log(res);
+
+        dispatch({type:'GET_FOOD_SUCCESS',payload:filterfood})
+    }catch(err){
+        dispatch({type:'GET_FOOD_FAILURE',payload:err})
+    }
+ }
   

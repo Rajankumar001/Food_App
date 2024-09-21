@@ -6,6 +6,7 @@ import {getAllFood} from '../Action/Action.js';
 import Loader from '../components/Loader.js';
 import Footerpage from  '../components/Footer/Footerpage.js';
 import './Homescreen.css'
+import Filters from '../components/Filters/Filters.js';
 const Homescreen = () => {
   const dispatch=useDispatch();
   const foodstate=useSelector((state)=>state.getFoodReducers);
@@ -28,7 +29,8 @@ const Homescreen = () => {
         err ?(
           <h1>error is fetching...</h1>
         ):(
-          <Row>
+          <Row >
+            <Filters/>
             {
              Food.map((sweets)=>{
               return (
