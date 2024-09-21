@@ -60,8 +60,8 @@ const [address,setAddress]=useState("");
       <span><h4>Already have account ? login</h4><a href='/login'>Login</a></span>
     </Form>
 </div>
-<Footerpage/>
 </div>
+<Footerpage/>
     </>
   )
 }
