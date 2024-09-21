@@ -25,6 +25,7 @@ hr{
     font-weight: 200;
     font-style: normal;
 }
+/* responsive */
 @media (max-width:600px) {
     .main-footer{
         margin-top: 20px;

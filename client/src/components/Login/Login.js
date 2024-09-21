@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useDispatch, useSelector} from 'react-redux';
+import { useDispatch} from 'react-redux';
 import './Login.css';
-import { Container } from 'react-bootstrap';
 import { LoginAction } from '../../Action/RegisterAction';
-
 import Footerpage from '../Footer/Footerpage';
 const Login = () => {
     const dispatch=useDispatch();
@@ -50,10 +48,10 @@ const LoginHandler=()=>{
       <span><h4>Don't have an account yet?Sign Up</h4><a href='/register'>sign up</a></span>
     </Form>  
     </div>
-    <Footerpage/>
     </div>
+    <Footerpage/>
     </>
   )
 }
 
-export default Login
+export default Login;
