@@ -14,7 +14,7 @@ const Filters = () => {
     <>
     <div  className='filter_container'>
     <div className='filter_search_box ' >
-    <Form.Control type="text" placeholder="Large text"  className='input_box text_area' value={searchkey} onChange={e=>setSearchkey(e.target.value)}/>
+    <Form.Control type="text" placeholder="search food in small"  className='input_box text_area' value={searchkey} onChange={e=>setSearchkey(e.target.value)}/>
     </div>
     <div className='filter_search_box'> 
     <Form.Select aria-label="Default select example"  className='input_box' value={category} onChange={e=>setCategory(e.target.value)}>

@@ -34,7 +34,7 @@ const LoginHandler=()=>{
       <h2>Login</h2>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label className='title'>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email"  value={email} onChange={e=>setEmail(e.target.value)} className='form_input'/>
+        <Form.Control type="email" placeholder="Enter email"  value={email} onChange={e=>setEmail(e.target.value)} className='form_input form-control '/>
         <Form.Text className="text-muted">
           <p>We'll never share your email with anyone else.</p>
         </Form.Text>
@@ -42,7 +42,7 @@ const LoginHandler=()=>{
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label className='title'>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password"value={password} onChange={e=>setPassword(e.target.value)} className='form_input'/>
+        <Form.Control type="password" placeholder="Password"value={password} onChange={e=>setPassword(e.target.value)} className='form_input form-control '/>
       </Form.Group>
       <Button variant="primary" onClick={LoginHandler} className='login-button'>
         login
