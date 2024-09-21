@@ -30,11 +30,11 @@ const Topbar = () => {
                 Contact Us
             </Nav.Link>
             </LinkContainer>
-            <LinkContainer to='/policy' >
+            {/* <LinkContainer to='/policy' >
             <Nav.Link className='nav-item'>
                 Terms and Policy
             </Nav.Link>
-            </LinkContainer>
+            </LinkContainer> */}
             </div>
         </Nav>
 

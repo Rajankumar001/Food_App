@@ -2,9 +2,18 @@
 .About_heading{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  color: #379777;
   font-weight: 100;
     padding: 20px;
+}
+.About_section{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: rgb(34, 96, 34);
+  font-style: normal;
 }
 .About_content{
   font-family: "Montserrat", sans-serif;

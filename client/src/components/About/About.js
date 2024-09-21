@@ -1,10 +1,11 @@
 import React from 'react'
  import {Container,Row,ListGroup} from 'react-bootstrap';
  import './About.css';
+import Footerpage from '../Footer/Footerpage';
 const About = () => {
   return (
     <>
-      <Container style={{marginTop:'15px',background:'#F0E68C',marginBottom:'20px'}}>
+      <Container style={{marginTop:'15px',background:'#F0E68C',marginBottom:'20px', borderRadius:'15px', padding:'20px'}}>
        <Row className='first_About_class'>
         <h2 className='About_section'>About Us</h2>
         <h4 className='About_heading'>
@@ -19,13 +20,13 @@ const About = () => {
         Our Offerings:
         </h4>
         <ListGroup as="ul" >
-      <ListGroup.Item as="li" style={{background:'#FFC72C'}}className='About_content'>
+      <ListGroup.Item as="li" style={{background:'#F4CE14'}}className='About_content'>
       Sweets and Snacks: Indulge in our wide variety of sweets and snacks, perfect for any occasion. From traditional Indian mithai to savory snacks, we have something to please every palate.
       </ListGroup.Item>
-      <ListGroup.Item as="li"style={{background:'#FFC72C'}}className='About_content'>
+      <ListGroup.Item as="li"style={{background:'#F4CE14'}}className='About_content'>
       Sweets and Snacks: Indulge in our wide variety of sweets and snacks, perfect for any occasion. From traditional Indian mithai to savory snacks, we have something to please every palate.
       </ListGroup.Item>
-      <ListGroup.Item as="li"style={{background:'#FFC72C'}} className='About_content'>
+      <ListGroup.Item as="li"style={{background:'#F4CE14'}} className='About_content'>
       Catering Services: Planning a wedding, mundan, upnayan, or any special event? Our professional halwais are here to make your celebration memorable. Book our catering service for authentic, mouth-watering dishes prepared on-site to your specifications.
       </ListGroup.Item>
       
@@ -46,19 +47,19 @@ const About = () => {
        
         </h4>
         <ListGroup as="ul">
-      <ListGroup.Item as="li"style={{background:'#FFC72C'}} className='About_content'>
+      <ListGroup.Item as="li"style={{background:'#F4CE14'}} className='About_content'>
       Quality: We are committed to using the highest quality ingredients in all our products
       </ListGroup.Item>
-      <ListGroup.Item as="li"style={{background:'#FFC72C'}}className='About_content'>
+      <ListGroup.Item as="li"style={{background:'#F4CE14'}}className='About_content'>
       Convenience: With easy online ordering and reliable delivery, satisfying your cravings has never been simpler.
       </ListGroup.Item>
-      <ListGroup.Item as="li" style={{background:'#FFC72C'}}className='About_content'>
+      <ListGroup.Item as="li" style={{background:'#F4CE14'}}className='About_content'>
       Customer Service: Our friendly and professional team is here to ensure you have the best experience with Hungry Crowd.
       </ListGroup.Item>
-      
     </ListGroup>
        </Row>
       </Container>
+      <Footerpage/>
     </>
   )
 }

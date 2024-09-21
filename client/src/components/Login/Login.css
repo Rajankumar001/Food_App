@@ -38,9 +38,12 @@
     font-size: 0.85rem;
     width: 400px;
     border: none;
-    box-shadow: 2px 2px 2px grey;
-    color: rgb(239, 230, 230)
-} form h2{
+    box-shadow: 1px 1px 1px grey;
+    color: rgb(239, 230, 230);
+    color: grey;
+    opacity: 0.7;
+} 
+form h2{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-size: 1.1rem;
